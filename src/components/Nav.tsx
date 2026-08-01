@@ -12,7 +12,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 bg-terracotta text-cream">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-display text-3xl tracking-wide">
-          Love &amp; Payne
+          Bri &amp; Austin
         </Link>
 
         <DesktopNav />

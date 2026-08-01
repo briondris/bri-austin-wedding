@@ -1,4 +1,11 @@
+import { features } from "@/config/features";
+import ComingSoon from "@/components/ComingSoon";
+
 export default function Details() {
+  if (!features.details) {
+    return <ComingSoon pageName="Details " />;
+  }
+
   return (
     <main className="bg-cream min-h-screen px-6 py-24">
       <div className="max-w-2xl mx-auto text-center mb-20">
