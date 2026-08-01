@@ -1,11 +1,18 @@
+import { features } from "@/config/features";
+import ComingSoon from "@/components/ComingSoon";
+
 export default function Schedule() {
+  if (!features.schedule) {
+    return <ComingSoon pageName="Schedule " />;
+  }
+
   const days = [
     {
       date: "Friday, July 30, 2027",
       events: [
         {
           time: "6:00 PM – 9:00 PM",
-          title: "Welcome Dinner",
+          title: "Welcome Party",
           location: "Foxglove Farm Barn",
           address: "Leelanau Peninsula, MI",
           mapUrl:

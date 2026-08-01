@@ -1,4 +1,11 @@
+import { features } from "@/config/features";
+import ComingSoon from "@/components/ComingSoon";
+
 export default function Registry() {
+  if (!features.registry) {
+    return <ComingSoon pageName="Registry " />;
+  }
+
   return (
     <main className="bg-terracotta min-h-screen px-6 py-24 flex items-center">
       <div className="max-w-3xl mx-auto text-center">

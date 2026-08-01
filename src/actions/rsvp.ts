@@ -16,6 +16,7 @@ export async function submitRSVP(formData: FormData): Promise<RSVPResult> {
   const { error } = await supabase.from("rsvps").insert([data]);
 
   if (error) {
+    console.error("Supabase RSVP error:", error);
     return { success: false, error: error.message };
   }
   return { success: true };

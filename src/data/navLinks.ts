@@ -1,9 +1,14 @@
-export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/rsvp", label: "RSVP" },
-  { href: "/schedule", label: "Schedule" },
-  { href: "/details", label: "Details" },
-  { href: "/thingstodo", label: "Things To Do" },
-  { href: "/lodging", label: "Lodging" },
-  { href: "/registry", label: "Registry" },
+import { features } from "@/config/features";
+
+const allLinks = [
+  { href: "/", label: "Home", enabled: true },
+  { href: "/savethedate", label: "Save the Date", enabled: true },
+  { href: "/rsvp", label: "RSVP", enabled: features.rsvp },
+  { href: "/schedule", label: "Schedule", enabled: features.schedule },
+  { href: "/lodging", label: "Lodging", enabled: true },
+  { href: "/details", label: "Details", enabled: features.details },
+  { href: "/thingstodo", label: "Things To Do", enabled: true },
+  { href: "/registry", label: "Registry", enabled: features.registry },
 ];
+
+export const navLinks = allLinks.filter((link) => link.enabled);

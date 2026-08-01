@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import FadeImage from "@/components/UnrollImage";
 
 export default function Home() {
   return (
@@ -8,11 +8,12 @@ export default function Home() {
       <section className="relative h-[75vh] min-h-[450px] w-full bg-terracotta">
         <div className="absolute inset-0 py-6">
           <div className="relative w-full h-full">
-            <Image
+            <FadeImage
               src="/images/engagement/yes.jpg"
               alt="Bri and Austin"
               fill
               priority
+              sizes="100vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black/20" />
@@ -31,10 +32,10 @@ export default function Home() {
             {/* Names block, bottom-center */}
             <div className="absolute bottom-10 md:bottom-16 left-0 right-0 flex flex-col items-center text-center">
               <h1 className="font-display text-5xl md:text-5xl text-white drop-shadow-md mb-2">
-                Bri &amp; Austin
+                Austin &amp; Brianna
               </h1>
               <h1 className="tracking-[0.25em] text-2xl uppercase text-white drop-shadow-md mb-2">
-                July 31, 2027 · Foxglove Farm
+                July 31, 2027 · Foxglove Farm, Michigan
               </h1>
             </div>
           </div>
@@ -45,19 +46,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Editorial 1: The Proposal (framed photo, left) */}
+      {/* Editorial 1: How We Met */}
       <section className=" px-6 md:px-16 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <span className="absolute -left-4 top-0 bottom-0 flex items-center [writing-mode:vertical-lr] rotate-180 text-xs tracking-[0.3em] uppercase text-cream">
-              01 / The Proposal
+              01 / How We Met
             </span>
             <div className="relative ml-6 aspect-[4/5] border-2 border-cream/50 p-3">
               <div className="relative w-full h-full">
-                <Image
-                  src="/images/engagement/hero.jpg"
-                  alt="Austin proposing to Bri"
+                <FadeImage
+                  src="/images/briAndAustin/earlyDay12.jpg"
+                  alt="Bri and Austin early in their relationship"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -65,66 +67,71 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="font-display text-5xl md:text-6xl leading-tight mb-6 text-cream">
-              How We Got Here, With{" "}
-              <span className="italic text-butter">Some Help</span>
+            <h2 className="font-display text-4xl md:text-6xl leading-tight mb-6 text-cream">
+              The Story <span className="italic text-butter">So</span>{" "}
+              <span className="italic text-butter">Far</span>
             </h2>
-            <p className="text-base md:text-3xl text-cream/90 leading-relaxed">
-              Every love story has its own pace. Ours found us in Golden Gate
-              Park, on a walk that turned into a proposal none of us saw coming
-              — except apparently, everyone did.
+            <p className="text-base md:text-2xl text-cream/90 leading-relaxed">
+              We were coworkers first in 2021, before we found out we&apos;d
+              actually crossed paths years earlier at the same SIGGRAPH
+              conference in Japan back in 2018. It was February of 2022 when
+              things became official.
             </p>
-            <p className="text-base md:text-3xl text-cream/90 leading-relaxed mb-8">
-              We can&apos;t wait to celebrate the next chapter with the people
-              who made this one so good.
+            <br></br>
+            <p className="text-base md:text-2xl text-cream/90 leading-relaxed mb-8">
+              Turns out we both already loved Titanic before we&apos;d even met.
+              From there, we showed each other Lady Bird and Fleabag, hiked
+              Shenandoah together, and went to our first concert as a couple
+              (Washed Out). We became best travel buddies, then each
+              other&apos;s rocks. One cross-country move to San Francisco later,
+              here we are, happily engaged and excited to celebrate with you
+              all!
             </p>
             <Link
-              href="/schedule"
+              href="/savethedate"
               className="text-md uppercase tracking-widest text-cream hover:text-butter transition-colors border-b border-cream hover:border-butter pb-1"
             >
-              See the wedding day timeline →
+              Save the date →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Photo trio strip */}
-      <section className="grid grid-cols-1 md:grid-cols-3">
+      {/* Photo trio strip 1 */}
+      <section className="grid grid-cols-3">
         {[
-          { src: "/images/engagement/hands.jpg", alt: "Holding hands" },
           {
-            src: "/images/engagement/briHandRing.jpg",
-            alt: "Engagement ring detail",
+            src: "/images/briAndAustin/winerymi.jpg",
+            alt: "Bri and Austin at the vineyard",
           },
           {
-            src: "/images/engagement/celebration.jpg",
-            alt: "Celebrating together",
+            src: "/images/briAndAustin/hocky.jpg",
+            alt: "Hockey",
+          },
+          {
+            src: "/images/briAndAustin/bakerbeach.JPEG",
+            alt: "Bri and Austin at Baker Beach",
+            zoom: "scale-150",
+            position: "30% 40%",
           },
         ].map((photo) => (
-          <div key={photo.src} className="relative aspect-square">
-            <Image
+          <div
+            key={photo.src}
+            className="relative aspect-square overflow-hidden"
+          >
+            <FadeImage
               src={photo.src}
               alt={photo.alt}
               fill
-              className="object-cover"
+              sizes="(max-width: 768px) 33vw, 33vw"
+              className={`object-cover ${photo.zoom ?? ""}`}
+              style={
+                photo.position ? { objectPosition: photo.position } : undefined
+              }
             />
           </div>
         ))}
       </section>
-
-      {/* Wave divider: cream into terracotta */}
-      {/* <div className="relative h-20 md:h-28 bg-cream">
-        <svg
-          className="absolute bottom-0 left-0 w-full h-full"
-          viewBox="0 0 1440 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,64 C240,0 480,120 720,88 C960,56 1200,0 1440,64 L1440,120 L0,120 Z"
-            fill="var(--color-terracotta)"
-          />
-        </svg>
-      </div> */}
 
       {/* Editorial 2: reversed layout, photo on right */}
       <section className="bg-cream px-6 md:px-16 py-20">
@@ -137,9 +144,9 @@ export default function Home() {
             </h2>
 
             <p className="text-lg md:text-2xl text-stone-600 leading-relaxed mb-6">
-              Austin grew up coming to Michigan, and once Bri got to know the
-              landscape, the beauty of it was impossible to miss. Since 2023,
-              this stretch of the Leelanau Peninsula has become one of our
+              Austin grew up coming to Michigan, and once we got to know the
+              landscape together, the beauty of it was impossible to miss. Since
+              2023, this stretch of the Leelanau Peninsula has become one of our
               favorite places.
             </p>
             <p className="text-lg md:text-2xl text-stone-600 leading-relaxed mb-8">
@@ -148,10 +155,10 @@ export default function Home() {
               Texas. Somehow, that made it the easiest choice in the world.
             </p>
             <Link
-              href="/lodging"
+              href="/thingstodo"
               className="text-md uppercase tracking-widest text-rosemary hover:text-terracotta transition-colors border-b border-rosemary hover:border-terracotta pb-1"
             >
-              Where to stay →
+              Things to do nearby →
             </Link>
           </div>
 
@@ -161,14 +168,88 @@ export default function Home() {
             </span>
             <div className="relative mr-6 aspect-[4/5] border-2 border-rosemary/40 p-3">
               <div className="relative w-full h-full">
-                <Image
-                  src="/images/engagement/happyTogetherBack.jpg"
+                <FadeImage
+                  src="/images/briAndAustin/biketrailmi.jpg"
                   alt="Bri and Austin together"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo trio strip 2 */}
+      <section className="grid grid-cols-3">
+        {[
+          {
+            src: "/images/engagement/happyTogetherBack.jpg",
+            alt: "Holding hands",
+          },
+          {
+            src: "/images/engagement/briHandRing.jpg",
+            alt: "Engagement ring detail",
+          },
+          {
+            src: "/images/engagement/celebration.jpg",
+            alt: "Celebrating together",
+          },
+        ].map((photo) => (
+          <div
+            key={photo.src}
+            className="relative aspect-square overflow-hidden"
+          >
+            <FadeImage
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(max-width: 768px) 33vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </section>
+
+      {/* Editorial 3: The Proposal */}
+      <section className=" px-6 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <span className="absolute -left-4 top-0 bottom-0 flex items-center [writing-mode:vertical-lr] rotate-180 text-xs tracking-[0.3em] uppercase text-cream">
+              03 / The Proposal
+            </span>
+            <div className="relative ml-6 aspect-[4/5] border-2 border-cream/50 p-3">
+              <div className="relative w-full h-full">
+                <FadeImage
+                  src="/images/engagement/hero.jpg"
+                  alt="Austin proposing to Bri in Golden Gate Park"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="font-display text-5xl md:text-6xl leading-tight mb-6 text-cream">
+              How We Got Here, With{" "}
+              <span className="italic text-butter">Some Help</span>
+            </h2>
+            <p className="text-base md:text-2xl text-cream/90 leading-relaxed">
+              We had it all planned out — well, one of us did. Golden Gate Park
+              is basically our backyard, so a walk there didn&apos;t raise any
+              alarms, even though Bri knew something was going on. What she
+              didn&apos;t know was that her sister and cousin were already
+              there, hidden nearby, waiting to catch the moment on camera the
+              second we showed up.
+            </p>
+            <p className="text-base md:text-2xl text-cream/90 leading-relaxed mb-8">
+              It was quiet, it was ours, and nobody even walked past. We went
+              from that little patch of woods to planning a wedding in the woods
+              of Michigan — turns out we really do love the trees.
+            </p>
           </div>
         </div>
       </section>
@@ -179,19 +260,21 @@ export default function Home() {
 
         <div className="relative w-full h-full py-6">
           <div className="relative w-full h-full">
-            <Image
+            <FadeImage
               src="/images/engagement/knee2.jpg"
               alt="Austin proposing to Bri"
               fill
+              priority
+              sizes="100vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 flex items-center justify-center">
               <Link
-                href="/rsvp"
+                href="/savethedate"
                 className="bg-cream text-terracotta px-10 py-4 text-3xl uppercase tracking-[0.25em] hover:bg-mustard hover:text-white transition-colors rounded-sm shadow-lg"
               >
-                RSVP
+                Save the Date
               </Link>
             </div>
           </div>
