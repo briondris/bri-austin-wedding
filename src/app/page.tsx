@@ -20,11 +20,11 @@ export default function Home() {
 
             {/* Quote block, top-left */}
             <div className="absolute top-10 left-8 md:top-16 md:left-16 -rotate-3 max-w-md md:max-w-lg">
-              <p className="font-script text-4xl md:text-4xl text-cream drop-shadow-md leading-snug">
+              <p className="font-script text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-cream drop-shadow-md leading-snug">
                 Can&apos;t believe how fast the sparks can fly <br /> When the
                 stars align
               </p>
-              <p className="text-sm text-white/90 drop-shadow-md mt-2">
+              <p className="text-xs sm:text-sm text-white/90 drop-shadow-md mt-2">
                 — Washed Out, &quot;Too Late&quot;
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function Home() {
             alt: "Bri and Austin at the vineyard",
           },
           {
-            src: "/images/briAndAustin/hocky.jpeg",
+            src: "/images/briAndAustin/hocky.jpg",
             alt: "Hockey",
           },
           {
@@ -117,7 +117,7 @@ export default function Home() {
         ].map((photo) => (
           <div
             key={photo.src}
-            className="relative aspect-square overflow-hidden"
+            className="relative aspect-[3/4] md:aspect-square overflow-hidden"
           >
             <FadeImage
               src={photo.src}
@@ -199,7 +199,7 @@ export default function Home() {
         ].map((photo) => (
           <div
             key={photo.src}
-            className="relative aspect-square overflow-hidden"
+            className="relative aspect-[3/4] md:aspect-square overflow-hidden"
           >
             <FadeImage
               src={photo.src}
