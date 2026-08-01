@@ -8,7 +8,7 @@ export default function DesktopNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden md:flex gap-8 text-md tracking-widest uppercase">
+    <nav className="hidden md:flex gap-8 text-lg tracking-widest uppercase">
       {navLinks.slice(1).map((link) => {
         const isActive = pathname === link.href;
 

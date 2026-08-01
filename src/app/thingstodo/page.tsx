@@ -406,12 +406,12 @@ export default function ThingsToDo() {
         className="bg-rosemary text-cream border-b-2 border-terracotta/20 px-6 md:px-16 py-20 scroll-mt-20"
       >
         <div className="max-w-5xl mx-auto grid md:grid-cols-[2fr_1fr] gap-10 items-start">
-          <div className="space-y-5">
+          <div className="order-2 md:order-1 space-y-5">
             {wineries.map((spot) => (
               <SpotRow key={spot.name} spot={spot} tone="light" />
             ))}
           </div>
-          <div className="flex flex-col items-center md:items-end gap-4">
+          <div className="flex flex-col items-center md:items-end gap-4 order-1 md:order-2">
             <GrapesIcon className="w-24 h-24 text-cream" />
             <h2 className="font-display text-5xl">Wineries</h2>
           </div>
@@ -584,15 +584,15 @@ export default function ThingsToDo() {
         id="northport"
         className="bg-terracotta text-cream border-t-2 border-terracotta/20 px-6 md:px-16 py-20 scroll-mt-20"
       >
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-10 items-start">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <WaveIcon className="w-24 h-24 text-cream" />
-            <h2 className="font-display text-5xl">Northport</h2>
-          </div>
-          <div className="space-y-5">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[2fr_1fr] gap-10 items-start">
+          <div className="order-2 md:order-1 space-y-5">
             {northport.map((spot) => (
               <SpotRow key={spot.name} spot={spot} tone="light" />
             ))}
+          </div>
+          <div className="flex flex-col items-center md:items-end gap-4 order-1 md:order-2">
+            <WaveIcon className="w-24 h-24 text-cream" />
+            <h2 className="font-display text-5xl">Northport</h2>
           </div>
         </div>
       </section>

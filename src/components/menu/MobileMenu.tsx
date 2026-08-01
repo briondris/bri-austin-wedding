@@ -15,7 +15,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
   if (!open) return null;
 
   return (
-    <nav className="md:hidden flex flex-col items-center gap-6 py-8 border-t border-cream/20 text-sm tracking-widest uppercase">
+    <nav className="md:hidden flex flex-col items-center gap-6 py-8 border-t border-cream/20 text-lg tracking-widest uppercase">
       {navLinks.slice(1).map((link) => {
         const isActive = pathname === link.href;
 
