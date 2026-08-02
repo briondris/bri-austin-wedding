@@ -15,9 +15,9 @@ export default function SaveTheDate() {
           July 31, 2027 · Foxglove Farm, Michigan
         </p>
         <p className="font-sans text-xl md:text-2xl text-stone-600 leading-relaxed">
-          Please save the date by{" "}
+          Please add your address below to save the date by{" "}
           <span className="font-semibold text-terracotta">September 30</span> —
-          our official invitation will follow closer to the big day.
+          our official RSVP invitation will follow in the near future.
         </p>
       </div>
 
@@ -27,11 +27,11 @@ export default function SaveTheDate() {
 
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h2 className="font-display text-3xl md:text-4xl text-stone-800 mb-4">
-          Send Us Your Address
+          Send Us Your Address To Save The Date
         </h2>
         <p className="font-sans text-lg md:text-xl text-stone-600 leading-relaxed">
-          Drop your mailing address below and we&apos;ll make sure your save the
-          date and, later, your formal invitation both find their way to you.
+          Drop your mailing address below and we&apos;ll send your formal
+          invitation to RSVP.
         </p>
       </div>
 

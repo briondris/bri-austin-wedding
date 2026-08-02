@@ -21,8 +21,8 @@ export default function Home() {
             {/* Quote block, top-left */}
             <div className="absolute top-10 left-8 right-8 md:right-auto md:top-16 md:left-16 -rotate-3 max-w-[75%] sm:max-w-sm md:max-w-lg">
               <p className="font-script text-xl sm:text-2xl md:text-2xl lg:text-3xl text-cream drop-shadow-md leading-snug">
-                &quot;If I got you and you got me, then the rest is
-                history.&quot;
+                &quot;If I got you and you got me,
+                <br /> then the rest is history.&quot;
               </p>
               <p className="text-xs sm:text-sm text-white/90 drop-shadow-md mt-2">
                 — CARRTOONS, &quot;Labor Of Love&quot;
