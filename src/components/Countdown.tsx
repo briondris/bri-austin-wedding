@@ -35,19 +35,19 @@ export default function Countdown() {
 
   const units = [
     { label: "Days", value: timeLeft.days },
-    { label: "Hours", value: timeLeft.hours },
-    { label: "Minutes", value: timeLeft.minutes },
-    { label: "Seconds", value: timeLeft.seconds },
+    { label: "Hrs", value: timeLeft.hours },
+    { label: "Min", value: timeLeft.minutes },
+    { label: "Sec", value: timeLeft.seconds },
   ];
 
   return (
-    <div className="flex justify-center gap-6 md:gap-10 flex-wrap">
+    <div className="flex justify-center gap-3 md:gap-10">
       {units.map((unit) => (
         <div key={unit.label} className="flex flex-col items-center">
-          <span className="font-sans font-bold text-5xl md:text-7xl text-terracotta tabular-nums">
+          <span className="font-sans font-bold text-lg md:text-5xl text-terracotta tabular-nums">
             {unit.value}
           </span>
-          <span className="font-sans font-semibold text-sm md:text-base uppercase tracking-widest text-stone-600 mt-2">
+          <span className="font-sans font-semibold text-[9px] md:text-sm uppercase tracking-widest text-stone-600 mt-0.5">
             {unit.label}
           </span>
         </div>

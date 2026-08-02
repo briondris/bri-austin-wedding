@@ -16,7 +16,7 @@ export default function SaveTheDateForm() {
 
   if (status === "success") {
     return (
-      <p className="font-sans text-xl md:text-2xl text-center text-rosemary max-w-md mx-auto">
+      <p className="font-sans text-lg md:text-2xl text-center text-rosemary max-w-md mx-auto">
         Thank you! We&apos;ve got your address and a paper save the date will be
         headed your way soon.
       </p>
@@ -24,14 +24,14 @@ export default function SaveTheDateForm() {
   }
 
   const inputClass =
-    "font-sans text-lg md:text-xl border border-rosemary/30 bg-white/50 rounded-sm px-5 py-4 text-stone-800 placeholder:text-stone-500 w-full";
+    "font-sans text-sm md:text-lg border border-rosemary/30 bg-white/50 rounded-sm px-3 py-2 md:px-4 md:py-3 text-stone-800 placeholder:text-stone-500 w-full";
 
   return (
-    <div className="max-w-lg mx-auto">
-      <form action={handleSubmit} className="flex flex-col gap-5">
+    <div className="max-w-lg mx-auto w-full">
+      <form action={handleSubmit} className="flex flex-col gap-2 md:gap-3.5">
         <input
           name="full_name"
-          placeholder="Full name or names"
+          placeholder="Full name"
           required
           className={inputClass}
         />
@@ -46,7 +46,7 @@ export default function SaveTheDateForm() {
           placeholder="Apt / Unit (optional)"
           className={inputClass}
         />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-2 md:gap-3.5">
           <input
             name="city"
             placeholder="City"
@@ -68,25 +68,28 @@ export default function SaveTheDateForm() {
         />
         <button
           type="submit"
-          className="font-sans font-semibold bg-terracotta text-cream rounded-sm px-6 py-4 text-lg md:text-xl uppercase tracking-widest hover:bg-rosemary transition-colors mt-2"
+          className="font-sans font-semibold bg-terracotta text-cream rounded-sm px-5 py-2.5 md:py-3 text-sm md:text-lg uppercase tracking-widest hover:bg-rosemary transition-colors mt-1"
         >
           {status === "submitting" ? "Submitting..." : "Save My Address"}
         </button>
       </form>
 
       {status === "error" && (
-        <div className="mt-6 border-2 border-terracotta bg-terracotta/10 rounded-sm px-6 py-5 text-center">
-          <p className="font-sans font-semibold text-lg md:text-xl text-terracotta mb-2">
+        <div className="mt-4 border-2 border-terracotta bg-terracotta/10 rounded-sm px-5 py-4 text-center">
+          <p className="font-sans font-semibold text-base md:text-xl text-terracotta mb-2">
             Something went wrong on our end.
           </p>
-          <p className="font-sans text-base md:text-lg text-stone-700 leading-relaxed">
+          <p className="font-sans text-sm md:text-lg text-stone-700 leading-relaxed">
             Please reach out to Bri or Austin directly so we can get your
             address the old-fashioned way — text or call{" "}
             <a href="tel:+18622680148" className="font-semibold underline">
               (862) 268-0148
             </a>{" "}
             or email{" "}
-            <a href="bbondris@gmail.com" className="font-semibold underline">
+            <a
+              href="mailto:bbondris@gmail.com"
+              className="font-semibold underline"
+            >
               bbondris@gmail.com
             </a>
             .

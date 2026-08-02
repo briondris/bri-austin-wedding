@@ -233,9 +233,9 @@ export default function ThingsToDo() {
 
   const suttonsBayGettingAround: Spot[] = [
     {
-      name: "Bike Rental",
+      name: "Suttons Bay Bikes",
       description:
-        "Suttons Bay Bikes — rentals for the Leelanau Trail, which runs all the way down toward Anchor Inn",
+        "Rentals for the Leelanau Trail (see home page pic of Austin and I), which runs all the way down toward Anchor Inn",
       mapQuery: "Suttons Bay Bikes MI",
     },
   ];
@@ -263,14 +263,16 @@ export default function ThingsToDo() {
 
   const suttonsBaySweets: Spot[] = [
     {
-      name: "Coffee",
-      description: "Hive Coffee Co",
+      name: "Hive Coffee Co",
+      description: "Great coffee spot that also serves waffles",
       mapQuery: "Hive Coffee Co Suttons Bay",
+      website: "https://www.hive-coffee.com/",
     },
     {
-      name: "Ice Cream",
-      description: "Dalzell Dairy",
+      name: "Dalzell Dairy",
+      description: "Go-to spot for ice cream",
       mapQuery: "Dalzell Dairy Suttons Bay",
+      website: "https://sites.google.com/view/dalzelldairy/home",
     },
     {
       name: "Murdick's Fudge Shop",
@@ -313,13 +315,15 @@ export default function ThingsToDo() {
 
   const lelandSweets: Spot[] = [
     {
-      name: "Ice Cream",
-      description: "Leland Harbor House",
+      name: "Leland Harbor House",
+      description: "Ice cream spot located in a clothing store",
       mapQuery: "Leland Harbor House",
+      website:
+        "https://www.lelandharborhouse.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=2946803370982188558",
     },
     {
-      name: "Coffee",
-      description: "Little Boat Coffee",
+      name: "Little Boat Coffee ",
+      description: "Cute little coffee spot",
       mapQuery: "Little Boat Coffee Leland",
     },
   ];
