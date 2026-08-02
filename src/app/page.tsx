@@ -25,8 +25,7 @@ export default function Home() {
                 <br /> then the rest is history.&quot;
               </p>
               <p className="text-xs sm:text-sm text-white/90 drop-shadow-md mt-2">
-                — CARRTOONS, &quot;Labor Of Love&quot; — CARRTOONS, &quot;Labor
-                Of Love&quot;
+                — CARRTOONS, &quot;Labor Of Love
               </p>
             </div>
 
