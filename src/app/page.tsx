@@ -283,7 +283,6 @@ export default function Home() {
               <Link
                 href="/savethedate"
                 className="bg-cream text-terracotta px-4 py-2 text-xs sm:px-8 sm:py-3 sm:text-lg md:px-10 md:py-4 md:text-xl uppercase tracking-[0.1em] sm:tracking-[0.2em] hover:bg-mustard hover:text-white transition-colors rounded-sm shadow-lg"
-                className="bg-cream text-terracotta px-4 py-2 text-xs sm:px-8 sm:py-3 sm:text-lg md:px-10 md:py-4 md:text-xl uppercase tracking-[0.1em] sm:tracking-[0.2em] hover:bg-mustard hover:text-white transition-colors rounded-sm shadow-lg"
               >
                 Save the Date
               </Link>

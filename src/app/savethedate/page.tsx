@@ -29,10 +29,6 @@ export default function SaveTheDate() {
         <h2 className="font-display text-3xl md:text-4xl text-stone-800 mb-4">
           Send Us Your Address To Save The Date
         </h2>
-        <p className="font-sans text-lg md:text-xl text-stone-600 leading-relaxed">
-          Drop your mailing address below and we&apos;ll send your formal
-          invitation to RSVP.
-        </p>
       </div>
 
       <SaveTheDateForm />
