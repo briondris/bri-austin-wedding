@@ -105,7 +105,7 @@ export default function Home() {
             alt: "Bri and Austin at the vineyard",
           },
           {
-            src: "/images/briAndAustin/hocky.jpg",
+            src: "/images/briAndAustin/hocky.jpeg",
             alt: "Hockey",
           },
           {
