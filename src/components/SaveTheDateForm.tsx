@@ -31,7 +31,7 @@ export default function SaveTheDateForm() {
       <form action={handleSubmit} className="flex flex-col gap-5">
         <input
           name="full_name"
-          placeholder="Full name"
+          placeholder="Full name or names"
           required
           className={inputClass}
         />
