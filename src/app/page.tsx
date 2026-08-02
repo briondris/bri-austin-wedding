@@ -19,13 +19,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/20" />
 
             {/* Quote block, top-left */}
-            <div className="absolute top-10 left-8 md:top-16 md:left-16 -rotate-3 max-w-md md:max-w-lg">
-              <p className="font-script text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-cream drop-shadow-md leading-snug">
-                Can&apos;t believe how fast the sparks can fly <br /> When the
-                stars align
+            <div className="absolute top-10 left-8 right-8 md:right-auto md:top-16 md:left-16 -rotate-3 max-w-[75%] sm:max-w-sm md:max-w-lg">
+              <p className="font-script text-xl sm:text-2xl md:text-2xl lg:text-3xl text-cream drop-shadow-md leading-snug">
+                &quot;If I got you and you got me, then the rest is
+                history.&quot;
               </p>
               <p className="text-xs sm:text-sm text-white/90 drop-shadow-md mt-2">
-                — Washed Out, &quot;Too Late&quot;
+                — CARRTOONS, &quot;Labor Of Love&quot;
               </p>
             </div>
 
@@ -80,12 +80,11 @@ export default function Home() {
             <br></br>
             <p className="text-base md:text-2xl text-cream/90 leading-relaxed mb-8">
               Turns out we both already loved Titanic before we&apos;d even met.
-              From there, we showed each other Lady Bird and Fleabag, hiked
-              Shenandoah together, and went to our first concert as a couple
-              (Washed Out). We became best travel buddies, then each
-              other&apos;s rocks. One cross-country move to San Francisco later,
-              here we are, happily engaged and excited to celebrate with you
-              all!
+              From there, together we shared movies, like Lady Bird, hiked
+              Shenandoah, and went to our first concert as a couple (Washed
+              Out). We became best travel buddies, then each other&apos;s rocks.
+              One cross-country move to San Francisco later, here we are,
+              happily engaged and excited to celebrate with you all!
             </p>
             <Link
               href="/savethedate"
@@ -238,17 +237,17 @@ export default function Home() {
               <span className="italic text-butter">Some Help</span>
             </h2>
             <p className="text-base md:text-2xl text-cream/90 leading-relaxed">
-              We had it all planned out — well, one of us did. Golden Gate Park
+              We had it all planned out, well, one of us did. Golden Gate Park
               is basically our backyard, so a walk there didn&apos;t raise any
               alarms, even though Bri knew something was going on. What she
-              didn&apos;t know was that her sister and cousin were already
-              there, hidden nearby, waiting to catch the moment on camera the
-              second we showed up.
+              didn&apos;t know was that her sister cousin were already there,
+              hidden nearby, with Hunter (cousin-in-law) waiting to catch the
+              moment on camera the second we showed up.
             </p>
             <p className="text-base md:text-2xl text-cream/90 leading-relaxed mb-8">
               It was quiet, it was ours, and nobody even walked past. We went
               from that little patch of woods to planning a wedding in the woods
-              of Michigan — turns out we really do love the trees.
+              of Michigan, turns out we really do love the trees.
             </p>
           </div>
         </div>
@@ -272,7 +271,7 @@ export default function Home() {
             <div className="absolute inset-0 flex items-center justify-center">
               <Link
                 href="/savethedate"
-                className="bg-cream text-terracotta px-10 py-4 text-3xl uppercase tracking-[0.25em] hover:bg-mustard hover:text-white transition-colors rounded-sm shadow-lg"
+                className="bg-cream text-terracotta px-4 py-2 text-xs sm:px-8 sm:py-3 sm:text-lg md:px-10 md:py-4 md:text-xl uppercase tracking-[0.1em] sm:tracking-[0.2em] hover:bg-mustard hover:text-white transition-colors rounded-sm shadow-lg"
               >
                 Save the Date
               </Link>

@@ -11,6 +11,9 @@ export default function SaveTheDate() {
         <h1 className="font-display text-6xl md:text-7xl text-stone-800 mb-6">
           Save the <span className="italic text-rosemary">Date</span>
         </h1>
+        <p className="font-display text-3xl md:text-4xl text-rosemary mb-6">
+          July 31, 2027 · Foxglove Farm, Michigan
+        </p>
         <p className="font-sans text-xl md:text-2xl text-stone-600 leading-relaxed">
           Please save the date by{" "}
           <span className="font-semibold text-terracotta">September 30</span> —
