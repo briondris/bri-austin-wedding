@@ -1,229 +1,25 @@
-function AnchorIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 100" fill="none" className={className}>
-      <circle cx="50" cy="20" r="8" stroke="currentColor" strokeWidth="3" />
-      <path
-        d="M50 28V80"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-      />
-      <path
-        d="M30 40H70"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-      />
-      <path
-        d="M20 55C20 70 35 82 50 82C65 82 80 70 80 55"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function HouseIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 100" fill="none" className={className}>
-      <path
-        d="M50 10L4 48H16V90H84V48H96Z"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinejoin="round"
-      />
-      <rect
-        x="42"
-        y="62"
-        width="16"
-        height="28"
-        stroke="currentColor"
-        strokeWidth="3"
-      />
-      <rect
-        x="24"
-        y="56"
-        width="14"
-        height="14"
-        stroke="currentColor"
-        strokeWidth="2.5"
-      />
-      <line
-        x1="31"
-        y1="56"
-        x2="31"
-        y2="70"
-        stroke="currentColor"
-        strokeWidth="2"
-      />
-      <line
-        x1="24"
-        y1="63"
-        x2="38"
-        y2="63"
-        stroke="currentColor"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function PlaneIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 100" fill="none" className={className}>
-      <path
-        d="M50 10L58 40L88 50L58 55L50 90L42 55L12 50L42 40L50 10Z"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function CartIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 100" fill="none" className={className}>
-      <path
-        d="M15 20H25L35 65H80L88 35H30"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="42" cy="82" r="6" stroke="currentColor" strokeWidth="3" />
-      <circle cx="72" cy="82" r="6" stroke="currentColor" strokeWidth="3" />
-    </svg>
-  );
-}
-
-interface Spot {
-  name: string;
-  description?: string;
-  website?: string;
-  mapQuery?: string;
-}
-
-function SpotLinks({ spot }: { spot: Spot }) {
-  if (!spot.website && !spot.mapQuery) return null;
-
-  return (
-    <div className="flex gap-2 mt-3">
-      {spot.website && (
-        <a
-          href={spot.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-sans text-xs uppercase tracking-wide border border-rosemary/40 text-rosemary rounded-full px-3 py-1 hover:bg-rosemary hover:text-cream transition-colors"
-        >
-          Website
-        </a>
-      )}
-      {spot.mapQuery && (
-        <a
-          href={`https://maps.google.com/?q=${encodeURIComponent(
-            spot.mapQuery
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-sans text-xs uppercase tracking-wide border border-rosemary/40 text-rosemary rounded-full px-3 py-1 hover:bg-rosemary hover:text-cream transition-colors"
-        >
-          Map
-        </a>
-      )}
-    </div>
-  );
-}
-
-function StayCard({ spot }: { spot: Spot }) {
-  return (
-    <div className="border-2 border-rosemary/30 rounded-sm p-6 md:p-8">
-      <h3 className="font-display text-3xl md:text-4xl text-stone-800 mb-2">
-        {spot.name}
-      </h3>
-      {spot.description && (
-        <p className="text-lg md:text-xl text-stone-600 leading-relaxed">
-          {spot.description}
-        </p>
-      )}
-      <SpotLinks spot={spot} />
-    </div>
-  );
-}
-
-function SectionDivider() {
-  return (
-    <div className="max-w-5xl mx-auto border-t-2 border-terracotta/20 my-16" />
-  );
-}
-
-const jumpLinks = [
-  { id: "anchor-inn", label: "Anchor Inn" },
-  { id: "airbnb", label: "Airbnb & VRBO" },
-  { id: "leland", label: "Leland" },
-  { id: "suttons-bay", label: "Suttons Bay & Northport" },
-  { id: "logistics", label: "Logistics" },
-];
+import {
+  AnchorIcon,
+  HouseIcon,
+  CityIcon,
+  PlaneIcon,
+  CarIcon,
+  CartIcon,
+  FishIcon,
+  WaveIcon,
+} from "@/components/icons";
+import SpotLinks from "@/components/lodging/SpotLinks";
+import StayCard from "@/components/lodging/StayCard";
+import SectionDivider from "@/components/lodging/SectionDivider";
+import {
+  jumpLinks,
+  leland,
+  suttonsBayNorthport,
+  traverseCity,
+  groceries,
+} from "@/data/lodging";
 
 export default function Lodging() {
-  const leland: Spot[] = [
-    {
-      name: "Falling Waters Lodge",
-      website: "https://www.fallingwaterslodge.com/",
-      mapQuery: "Falling Waters Lodge Leland MI",
-    },
-    {
-      name: "The Leland Lodge",
-      website: "https://www.lelandlodge.com/",
-      mapQuery: "The Leland Lodge Leland MI",
-    },
-  ];
-
-  const suttonsBayNorthport: Spot[] = [
-    {
-      name: "Suttons Bay Harbor House",
-      website: "https://www.suttonsbayharborhouse.com/",
-      mapQuery: "Suttons Bay Harbor House Suttons Bay MI",
-    },
-    {
-      name: "Sunrise Landing",
-      website: "http://www.sunriselanding.com/",
-      mapQuery: "Sunrise Landing Northport MI",
-    },
-  ];
-
-  const groceries: Spot[] = [
-    {
-      name: "Hansen Foods",
-      description: "Local grocery store right in Suttons Bay",
-      mapQuery: "Hansen Foods Suttons Bay MI",
-    },
-    {
-      name: "Leland Mercantile Co",
-      description: "Great local grocery option in Leland",
-      mapQuery: "Leland Mercantile Co Leland MI",
-    },
-    {
-      name: "Tom's Food Market — Northport",
-      description:
-        "Great local grocery, closest to the Suttons Bay / Northport area",
-      mapQuery: "Tom's Food Market Northport MI",
-    },
-    {
-      name: "Tom's Food Market — Traverse City",
-      description:
-        "Beloved local grocer, a Traverse City favorite for over 80 years",
-      mapQuery: "Tom's Food Market Traverse City MI",
-    },
-    {
-      name: "Costco — Traverse City",
-      description:
-        "125 E South Airport Rd — good for stocking up if your group needs bulk supplies",
-      mapQuery: "Costco 125 E South Airport Rd Traverse City MI",
-    },
-  ];
-
   return (
     <main className="bg-cream min-h-screen">
       {/* Header */}
@@ -332,9 +128,12 @@ export default function Lodging() {
         id="leland"
         className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
       >
-        <h2 className="font-display text-5xl mb-10 text-center text-stone-800">
-          Leland
-        </h2>
+        <div className="flex flex-col items-center gap-4 mb-10">
+          <FishIcon className="w-20 h-20 text-rosemary" />
+          <h2 className="font-display text-5xl text-stone-800 text-center">
+            Leland
+          </h2>
+        </div>
         <div className="grid md:grid-cols-2 gap-6">
           {leland.map((spot) => (
             <StayCard key={spot.name} spot={spot} />
@@ -349,9 +148,12 @@ export default function Lodging() {
         id="suttons-bay"
         className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
       >
-        <h2 className="font-display text-5xl mb-10 text-center text-stone-800">
-          Suttons Bay & Northport
-        </h2>
+        <div className="flex flex-col items-center gap-4 mb-10">
+          <WaveIcon className="w-20 h-20 text-rosemary" />
+          <h2 className="font-display text-5xl text-stone-800 text-center">
+            Suttons Bay & Northport
+          </h2>
+        </div>
         <div className="grid md:grid-cols-2 gap-6">
           {suttonsBayNorthport.map((spot) => (
             <StayCard key={spot.name} spot={spot} />
@@ -361,7 +163,31 @@ export default function Lodging() {
 
       <SectionDivider />
 
-      {/* Logistics: Airport & Groceries */}
+      {/* Traverse City */}
+      <section
+        id="traverse-city"
+        className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
+      >
+        <div className="flex flex-col items-center gap-4 mb-10">
+          <CityIcon className="w-20 h-20 text-terracotta" />
+          <h2 className="font-display text-5xl text-stone-800 text-center">
+            Traverse City
+          </h2>
+          <p className="text-lg md:text-xl text-stone-600 max-w-md mx-auto text-center">
+            A bit further out, but a good option if Anchor Inn and the peninsula
+            towns are full — roughly 30-40 minutes from Foxglove Farm.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {traverseCity.map((spot) => (
+            <StayCard key={spot.name} spot={spot} />
+          ))}
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* Logistics: Transportation, Airport, Groceries */}
       <section
         id="logistics"
         className="max-w-5xl mx-auto px-6 md:px-16 pb-24 scroll-mt-20"
@@ -389,6 +215,39 @@ export default function Lodging() {
               spot={{
                 name: "Cherry Capital Airport",
                 mapQuery: "Cherry Capital Airport TVC",
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start mb-14">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <CarIcon className="w-24 h-24 text-terracotta" />
+            <h3 className="font-display text-3xl md:text-4xl text-stone-800">
+              Getting Around
+            </h3>
+          </div>
+          <div>
+            <p className="text-lg md:text-xl text-stone-600 leading-relaxed mb-3">
+              <span className="font-sans font-semibold text-stone-800">
+                Heads up:
+              </span>{" "}
+              Uber and Lyft are unreliable to nonexistent up here — we&apos;d
+              recommend planning around a rental car or a scheduled ride
+              instead.
+            </p>
+            <p className="text-lg md:text-xl text-stone-600 leading-relaxed">
+              Car rental counters are located directly at the airport. For
+              scheduled rides,{" "}
+              <span className="font-sans font-semibold text-stone-800">
+                Up North Taxi
+              </span>{" "}
+              offers pre-booked pickups — worth reserving ahead of time.
+            </p>
+            <SpotLinks
+              spot={{
+                name: "Up North Taxi",
+                mapQuery: "Up North Taxi Traverse City MI",
               }}
             />
           </div>
