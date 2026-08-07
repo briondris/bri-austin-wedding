@@ -4,20 +4,21 @@ import SaveTheDateForm from "@/components/SaveTheDateForm";
 export default function SaveTheDate() {
   return (
     <main className="bg-cream min-h-screen px-6 pb-16 flex flex-col">
-      <div className="max-w-1xl mx-auto text-center pt-24 pb-10">
+      <div className="max-w-1xl mx-auto text-center pt-24 pb-3 md:pb-6">
         <p className="font-sans font-semibold text-xs md:text-lg uppercase tracking-[0.3em] text-terracotta mb-2 md:mb-4">
           Mark Your Calendar
         </p>
         <h1 className="font-display text-4xl md:text-7xl text-stone-800 mb-2 md:mb-4">
           Save the <span className="italic text-rosemary">Date</span>
         </h1>
-        <p className="font-display text-xl md:text-4xl text-rosemary mb-2 md:mb-4">
-          July 31, 2027 · Foxglove Farm, MI
+        <p className="font-display text-xl md:text-4xl mb-2 md:mb-4">
+          <span className="text-stone-800">July 31, 2027</span>{" "}
+          <span className="text-rosemary">· Foxglove Farm, MI</span>
         </p>
         <p className="font-sans font-bold text-sm md:text-2xl text-stone-600 leading-snug">
           Add your address below by{" "}
           <span className="text-terracotta">September 30</span> so we can mail
-          the RSVP to you!
+          you the invite!
         </p>
       </div>
 

@@ -233,21 +233,21 @@ export default function Home() {
 
           <div>
             <h2 className="font-display text-5xl md:text-6xl leading-tight mb-6 text-cream">
-              How We Got Here, With{" "}
-              <span className="italic text-butter">Some Help</span>
+              How We Got Here,
+              <br /> With<span className="italic text-butter"> Some Help</span>
             </h2>
             <p className="text-base md:text-2xl text-cream/90 leading-relaxed">
               We had it all planned out, well, one of us did. Golden Gate Park
               is basically our backyard, so a walk there didn&apos;t raise any
               alarms, even though Bri knew something was going on. What she
               didn&apos;t know was that her sister and cousin were already
-              there, hidden nearby, with Hunter (cousin-in-law) waiting to catch
-              the moment on camera the second we showed up.
+              there, hidden nearby, with Hunter (her cousin-in-law) waiting to
+              catch the moment on camera the second we showed up.
             </p>
             <p className="text-base md:text-2xl text-cream/90 leading-relaxed mb-8">
               It was quiet, it was ours, and nobody even walked past. We went
               from that little patch of woods to planning a wedding in the woods
-              of Michigan, turns out we really do love the trees.
+              of Michigan, turns out, we really love trees.
             </p>
           </div>
         </div>

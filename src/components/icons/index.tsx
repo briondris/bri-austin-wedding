@@ -1,0 +1,12 @@
+export { default as AnchorIcon } from "./AnchorIcon";
+export { default as HouseIcon } from "./HouseIcon";
+export { default as CityIcon } from "./CityIcon";
+export { default as PlaneIcon } from "./PlaneIcon";
+export { default as CarIcon } from "./CarIcon";
+export { default as CartIcon } from "./CartIcon";
+export { default as MountainIcon } from "./MountainIcon";
+export { default as BikeIcon } from "./BikeIcon";
+export { default as FishIcon } from "./FishIcon";
+export { default as GrapesIcon } from "./GrapesIcon";
+export { default as WaveIcon } from "./WaveIcon";
+export { default as SailboatIcon } from "./SailboatIcon";
