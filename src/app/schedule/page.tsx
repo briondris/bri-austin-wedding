@@ -72,18 +72,18 @@ export default function Schedule() {
   return (
     <main className="bg-cream min-h-screen px-6 py-24">
       <div className="max-w-2xl mx-auto text-center mb-20">
-        <p className="font-sans font-semibold text-base md:text-lg uppercase tracking-[0.3em] text-terracotta mb-4">
+        <p className="font-sans font-semibold text-base md:text-lg uppercase tracking-[0.3em] text-apricot mb-4">
           Foxglove Farm
         </p>
         <h1 className="font-display text-6xl md:text-7xl text-stone-800">
-          Wedding Day <span className="italic text-rosemary">Schedule</span>
+          Wedding Day <span className="italic text-olive">Schedule</span>
         </h1>
       </div>
 
       <div className="max-w-4xl mx-auto flex flex-col gap-20">
         {days.map((day) => (
           <div key={day.date}>
-            <h2 className="font-display text-4xl md:text-5xl text-terracotta text-center mb-12">
+            <h2 className="font-display text-4xl md:text-5xl text-apricot text-center mb-12">
               {day.date}
             </h2>
 
@@ -97,12 +97,12 @@ export default function Schedule() {
                     <h3 className="font-display text-4xl md:text-5xl text-stone-800 mb-2">
                       {event.title}
                     </h3>
-                    <p className="font-sans font-semibold text-lg md:text-xl uppercase tracking-widest text-terracotta">
+                    <p className="font-sans font-semibold text-lg md:text-xl uppercase tracking-widest text-apricot">
                       {event.time}
                     </p>
                   </div>
 
-                  <div className="hidden md:block w-px bg-rosemary/20 h-full min-h-[100px]" />
+                  <div className="hidden md:block w-px bg-olive/20 h-full min-h-[100px]" />
 
                   <div className="text-center md:text-left">
                     <p className="font-sans font-semibold text-xl md:text-2xl text-stone-800">
@@ -119,7 +119,7 @@ export default function Schedule() {
                         href={event.mapUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-sans font-semibold inline-block bg-rosemary text-cream px-8 py-4 text-base md:text-lg uppercase tracking-wide rounded-sm hover:bg-terracotta transition-colors shadow-md"
+                        className="font-sans font-semibold inline-block bg-olive text-cream px-8 py-4 text-base md:text-lg uppercase tracking-wide rounded-sm hover:bg-apricot transition-colors shadow-md"
                       >
                         View Map →
                       </a>

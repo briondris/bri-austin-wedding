@@ -14,7 +14,7 @@ export default function SpotLinks({
 }) {
   const base =
     tone === "light"
-      ? "border-cream/60 text-cream hover:bg-cream hover:text-terracotta"
+      ? "border-cream/60 text-cream hover:bg-cream hover:text-apricot"
       : "border-stone-400 text-stone-700 hover:bg-stone-800 hover:text-cream";
 
   if (!spot.website && !spot.mapQuery) return null;

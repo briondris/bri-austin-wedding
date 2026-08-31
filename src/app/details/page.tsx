@@ -9,11 +9,11 @@ export default function Details() {
   return (
     <main className="bg-cream min-h-screen px-6 py-24">
       <div className="max-w-2xl mx-auto text-center mb-20">
-        <p className="font-sans font-semibold text-base md:text-lg uppercase tracking-[0.3em] text-terracotta mb-4">
+        <p className="font-sans font-semibold text-base md:text-lg uppercase tracking-[0.3em] text-apricot mb-4">
           For Our Guests
         </p>
         <h1 className="font-display text-6xl md:text-7xl text-stone-800">
-          Wedding <span className="italic text-rosemary">Details</span>
+          Wedding <span className="italic text-olive">Details</span>
         </h1>
       </div>
 
@@ -45,11 +45,11 @@ export default function Details() {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 max-w-2xl mx-auto">
           {[
-            { name: "Lavender", className: "bg-lavender" },
-            { name: "Sage Green", className: "bg-sage" },
-            { name: "Rosemary", className: "bg-rosemary" },
-            { name: "Mustard", className: "bg-mustard" },
-            { name: "Butter Yellow", className: "bg-butter" },
+            { name: "Lavender", className: "bg-copperTulip" },
+            { name: "Sage Green", className: "bg-mossGreen" },
+            { name: "Rosemary", className: "bg-olive" },
+            { name: "Mustard", className: "bg-marigold" },
+            { name: "Butter Yellow", className: "bg-marigold" },
           ].map((color) => (
             <div key={color.name} className="flex flex-col items-center gap-3">
               <div
@@ -86,7 +86,7 @@ export default function Details() {
               key={item}
               className="text-lg text-stone-600 leading-relaxed flex gap-3"
             >
-              <span className="text-terracotta">—</span>
+              <span className="text-apricot">—</span>
               {item}
             </li>
           ))}

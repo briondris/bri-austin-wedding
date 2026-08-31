@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const TARGET_DATE = new Date("2026-09-30T00:00:00");
+const TARGET_DATE = new Date("2026-10-31T00:00:00");
 
 function getTimeLeft() {
   const now = new Date();
@@ -44,7 +44,7 @@ export default function Countdown() {
     <div className="flex justify-center gap-3 md:gap-10">
       {units.map((unit) => (
         <div key={unit.label} className="flex flex-col items-center">
-          <span className="font-sans font-bold text-lg md:text-5xl text-terracotta tabular-nums">
+          <span className="font-sans font-bold text-lg md:text-5xl text-apricot tabular-nums">
             {unit.value}
           </span>
           <span className="font-sans font-semibold text-[9px] md:text-sm uppercase tracking-widest text-stone-600 mt-0.5">

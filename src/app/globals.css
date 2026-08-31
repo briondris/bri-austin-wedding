@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lavender: #a895d1;
-  --color-sage: #a2b178;
-  --color-rosemary: #3d5a34;
-  --color-mustard: #d9a441;
-  --color-butter: #f2c230;
-  --color-cream: #f5f0e6;
-  --color-terracotta: #eb8672;
+  --color-bloodOrange: #ab482d;
+  --color-terracotta: #d06224;
+  --color-copperTulip: #ce5a43;
+  --color-mossGreen: #889063;
+  --color-olive: #8a8635;
+  --color-marigold: #e6ae3c;
+  --color-cream: #f5ead3;
+  --color-apricot: #f09367;
+  --color-ivory: #fffff0;
 }
 
 h1,
@@ -24,6 +26,6 @@ span {
 }
 
 body {
-  background: var(--color-terracotta);
+  background: var(--color-apricot);
   color: var(--color-cream);
 }
