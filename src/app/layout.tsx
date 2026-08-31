@@ -34,7 +34,7 @@ const scriptLight = Shadows_Into_Light({
 
 export const metadata: Metadata = {
   title: "Bri & Austin — July 31, 2027",
-  description: "Join us at Foxglove Farm, Leelanau Peninsula, Michigan",
+  description: "Join us at The Foxglove Farm, Suttons Bay, Michigan",
 };
 
 export default function RootLayout({

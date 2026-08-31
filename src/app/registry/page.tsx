@@ -7,7 +7,7 @@ export default function Registry() {
   }
 
   return (
-    <main className="bg-terracotta min-h-screen px-6 py-24 flex items-center">
+    <main className="bg-apricot min-h-screen px-6 py-24 flex items-center">
       <div className="max-w-3xl mx-auto text-center">
         <p className="font-script text-4xl md:text-5xl text-cream mb-10 -rotate-2">
           a little honesty
@@ -15,16 +15,16 @@ export default function Registry() {
 
         <h1 className="font-display text-5xl md:text-6xl text-cream mb-12 leading-tight">
           We Know Weddings Are{" "}
-          <span className="italic text-butter">Expensive</span>
+          <span className="italic text-marigold">Expensive</span>
           <br />
           To Attend
         </h1>
 
         <div className="max-w-2xl mx-auto space-y-8 text-left">
           <p className="text-2xl md:text-3xl text-cream leading-relaxed">
-            Just getting to Foxglove Farm is already a gift to us — travel, time
-            off, a place to stay, all of it. We don&apos;t take that lightly,
-            and your presence is genuinely enough.
+            Just getting to The Foxglove Farm is already a gift to us — travel,
+            time off, a place to stay, all of it. We don&apos;t take that
+            lightly, and your presence is genuinely enough.
           </p>
           <p className="text-2xl md:text-3xl text-cream leading-relaxed">
             If you&apos;re still looking for a way to celebrate with us further,
@@ -40,7 +40,7 @@ export default function Registry() {
           </p>
           <a
             href="#"
-            className="inline-block bg-cream text-terracotta px-12 py-5 text-lg md:text-xl font-sans font-semibold uppercase tracking-widest hover:bg-butter transition-colors rounded-sm shadow-lg"
+            className="inline-block bg-cream text-apricot px-12 py-5 text-lg md:text-xl font-sans font-semibold uppercase tracking-widest hover:bg-marigold transition-colors rounded-sm shadow-lg"
           >
             Give a Gift
           </a>

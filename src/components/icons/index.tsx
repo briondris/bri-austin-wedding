@@ -10,3 +10,5 @@ export { default as FishIcon } from "./FishIcon";
 export { default as GrapesIcon } from "./GrapesIcon";
 export { default as WaveIcon } from "./WaveIcon";
 export { default as SailboatIcon } from "./SailboatIcon";
+export { default as CalendarIcon } from "./CalendarIcon";
+export { default as LeafIcon } from "./LeafIcon";

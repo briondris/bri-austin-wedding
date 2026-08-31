@@ -15,7 +15,7 @@ export default function SpotLinks({ spot }: { spot: Spot }) {
           href={spot.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-sans text-xs uppercase tracking-wide border border-rosemary/40 text-rosemary rounded-full px-3 py-1 hover:bg-rosemary hover:text-cream transition-colors"
+          className="font-sans text-xs uppercase tracking-wide border border-olive/40 text-olive rounded-full px-3 py-1 hover:bg-olive hover:text-cream transition-colors"
         >
           Website
         </a>
@@ -27,7 +27,7 @@ export default function SpotLinks({ spot }: { spot: Spot }) {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-sans text-xs uppercase tracking-wide border border-rosemary/40 text-rosemary rounded-full px-3 py-1 hover:bg-rosemary hover:text-cream transition-colors"
+          className="font-sans text-xs uppercase tracking-wide border border-olive/40 text-olive rounded-full px-3 py-1 hover:bg-olive hover:text-cream transition-colors"
         >
           Map
         </a>

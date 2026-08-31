@@ -9,7 +9,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-terracotta text-cream">
+    <header className="sticky top-0 z-50 bg-apricot text-ivory">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-display text-3xl tracking-wide">
           Bri &amp; Austin
@@ -23,17 +23,17 @@ export default function Nav() {
           aria-label="Toggle menu"
         >
           <span
-            className={`h-px bg-cream transition-transform ${
+            className={`h-px bg-ivory transition-transform ${
               open ? "rotate-45 translate-y-[7px]" : ""
             }`}
           />
           <span
-            className={`h-px bg-cream transition-opacity ${
+            className={`h-px bg-ivory transition-opacity ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-px bg-cream transition-transform ${
+            className={`h-px bg-ivory transition-transform ${
               open ? "-rotate-45 -translate-y-[7px]" : ""
             }`}
           />

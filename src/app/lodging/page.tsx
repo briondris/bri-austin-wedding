@@ -8,9 +8,11 @@ import {
   FishIcon,
   WaveIcon,
 } from "@/components/icons";
+
 import SpotLinks from "@/components/lodging/SpotLinks";
 import StayCard from "@/components/lodging/StayCard";
 import SectionDivider from "@/components/lodging/SectionDivider";
+
 import {
   jumpLinks,
   leland,
@@ -21,29 +23,31 @@ import {
 
 export default function Lodging() {
   return (
-    <main className="bg-cream min-h-screen">
+    <main className="min-h-screen bg-cream">
       {/* Header */}
-      <div className="max-w-2xl mx-auto text-center px-6 pt-24 pb-10">
-        <p className="font-sans font-semibold text-base md:text-lg uppercase tracking-[0.3em] text-terracotta mb-4">
+      <div className="mx-auto max-w-2xl px-6 pt-10 pb-6 text-center md:pt-24 md:pb-10">
+        <p className="mb-2 font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-bloodOrange md:mb-4 md:text-lg md:tracking-[0.3em]">
           For Our Guests
         </p>
-        <h1 className="font-display text-6xl md:text-7xl text-stone-800">
-          Where to <span className="italic text-rosemary">Stay</span>
+
+        <h1 className="font-display text-5xl leading-none text-stone-800 md:text-7xl">
+          Where to <span className="italic text-olive">Stay</span>
         </h1>
-        <p className="font-sans text-xl md:text-2xl text-stone-600 mt-6 max-w-lg mx-auto leading-relaxed">
+
+        <p className="mx-auto mt-4 max-w-lg font-sans text-sm leading-relaxed text-stone-600 md:mt-6 md:text-2xl">
           We&apos;ve rounded up our favorite spots on the Leelanau Peninsula,
-          all a short drive from Foxglove Farm.
+          all a short drive from The Foxglove Farm.
         </p>
       </div>
 
       {/* Jump nav */}
-      <nav className="sticky top-0 z-40 bg-cream/95 backdrop-blur border-y border-terracotta/20 py-4 mb-16">
-        <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-x-8 gap-y-2 px-6">
+      <nav className="sticky top-0 z-40 mb-8 border-y border-olive/20 bg-cream/95 py-3 backdrop-blur md:mb-16 md:py-4">
+        <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-x-5 gap-y-1.5 px-4 md:gap-x-8 md:gap-y-2 md:px-6">
           {jumpLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              className="font-sans font-semibold text-sm uppercase tracking-widest text-stone-600 hover:text-terracotta transition-colors"
+              className="font-sans text-[10px] font-semibold uppercase tracking-[0.14em] text-stone-600 transition-colors hover:text-bloodOrange md:text-sm md:tracking-widest"
             >
               {link.label}
             </a>
@@ -54,23 +58,29 @@ export default function Lodging() {
       {/* Anchor Inn */}
       <section
         id="anchor-inn"
-        className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
+        className="mx-auto max-w-5xl scroll-mt-20 px-6 md:px-16"
       >
-        <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start border-2 border-terracotta/30 rounded-sm p-8 md:p-12">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <AnchorIcon className="w-24 h-24 text-terracotta" />
-            <h2 className="font-display text-5xl text-stone-800">Anchor Inn</h2>
+        <div className="grid gap-6 rounded-sm border border-bloodOrange/30 p-5 md:grid-cols-[1fr_2fr] md:gap-10 md:border-2 md:p-12">
+          <div className="flex flex-col items-center gap-2 md:items-start md:gap-4">
+            <AnchorIcon className="h-14 w-14 text-bloodOrange md:h-24 md:w-24" />
+
+            <h2 className="font-display text-4xl text-stone-800 md:text-5xl">
+              Anchor Inn
+            </h2>
           </div>
+
           <div>
-            <p className="font-sans font-semibold text-xl md:text-2xl text-terracotta mb-3">
+            <p className="mb-2 font-sans text-base font-semibold text-bloodOrange md:mb-3 md:text-2xl">
               Our Room Block
             </p>
-            <p className="text-lg md:text-xl text-stone-600 leading-relaxed mb-4">
+
+            <p className="mb-3 text-sm leading-relaxed text-stone-600 md:mb-4 md:text-xl">
               This is where we&apos;ve held a room block for the wedding. Please
               reach out to us directly to check availability before booking —
               space is limited!
             </p>
-            <p className="text-lg md:text-xl text-stone-600 leading-relaxed mb-4">
+
+            <p className="mb-3 text-sm leading-relaxed text-stone-600 md:mb-4 md:text-xl">
               <span className="font-sans font-semibold text-stone-800">
                 A heads up:
               </span>{" "}
@@ -79,6 +89,7 @@ export default function Lodging() {
               shuttle bus running to and from this location. Staying nearby will
               make the whole weekend easier to get around.
             </p>
+
             <SpotLinks
               spot={{
                 name: "Anchor Inn",
@@ -95,22 +106,25 @@ export default function Lodging() {
       {/* Airbnb / VRBO */}
       <section
         id="airbnb"
-        className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
+        className="mx-auto max-w-5xl scroll-mt-20 px-6 md:px-16"
       >
-        <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <HouseIcon className="w-24 h-24 text-rosemary" />
-            <h2 className="font-display text-5xl text-stone-800">
-              Airbnb & VRBO
+        <div className="grid gap-6 md:grid-cols-[1fr_2fr] md:gap-10">
+          <div className="flex flex-col items-center gap-2 md:items-start md:gap-4">
+            <HouseIcon className="h-14 w-14 text-olive md:h-24 md:w-24" />
+
+            <h2 className="font-display text-4xl text-stone-800 md:text-5xl">
+              Airbnb &amp; VRBO
             </h2>
           </div>
+
           <div>
-            <p className="text-lg md:text-xl text-stone-600 leading-relaxed mb-4">
+            <p className="mb-3 text-sm leading-relaxed text-stone-600 md:mb-4 md:text-xl">
               We&apos;d also recommend looking at Airbnb and VRBO — but book
               soon with your group! Houses in the area are limited, especially
               during wedding season.
             </p>
-            <p className="text-lg md:text-xl text-stone-600 leading-relaxed">
+
+            <p className="text-sm leading-relaxed text-stone-600 md:text-xl">
               Try to book somewhere around the{" "}
               <span className="font-sans font-semibold text-stone-800">
                 Suttons Bay or Leland
@@ -126,15 +140,17 @@ export default function Lodging() {
       {/* Leland */}
       <section
         id="leland"
-        className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
+        className="mx-auto max-w-5xl scroll-mt-20 px-6 md:px-16"
       >
-        <div className="flex flex-col items-center gap-4 mb-10">
-          <FishIcon className="w-20 h-20 text-rosemary" />
-          <h2 className="font-display text-5xl text-stone-800 text-center">
+        <div className="mb-6 flex flex-col items-center gap-2 md:mb-10 md:gap-4">
+          <FishIcon className="h-12 w-12 text-olive md:h-20 md:w-20" />
+
+          <h2 className="text-center font-display text-4xl text-stone-800 md:text-5xl">
             Leland
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
+
+        <div className="grid gap-4 md:grid-cols-2 md:gap-6">
           {leland.map((spot) => (
             <StayCard key={spot.name} spot={spot} />
           ))}
@@ -146,15 +162,17 @@ export default function Lodging() {
       {/* Suttons Bay / Northport */}
       <section
         id="suttons-bay"
-        className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
+        className="mx-auto max-w-5xl scroll-mt-20 px-6 md:px-16"
       >
-        <div className="flex flex-col items-center gap-4 mb-10">
-          <WaveIcon className="w-20 h-20 text-rosemary" />
-          <h2 className="font-display text-5xl text-stone-800 text-center">
-            Suttons Bay & Northport
+        <div className="mb-6 flex flex-col items-center gap-2 md:mb-10 md:gap-4">
+          <WaveIcon className="h-12 w-12 text-bloodOrange md:h-20 md:w-20" />
+
+          <h2 className="text-center font-display text-4xl text-stone-800 md:text-5xl">
+            Suttons Bay &amp; Northport
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
+
+        <div className="grid gap-4 md:grid-cols-2 md:gap-6">
           {suttonsBayNorthport.map((spot) => (
             <StayCard key={spot.name} spot={spot} />
           ))}
@@ -166,19 +184,22 @@ export default function Lodging() {
       {/* Traverse City */}
       <section
         id="traverse-city"
-        className="max-w-5xl mx-auto px-6 md:px-16 scroll-mt-20"
+        className="mx-auto max-w-5xl scroll-mt-20 px-6 md:px-16"
       >
-        <div className="flex flex-col items-center gap-4 mb-10">
-          <CityIcon className="w-20 h-20 text-terracotta" />
-          <h2 className="font-display text-5xl text-stone-800 text-center">
+        <div className="mb-6 flex flex-col items-center gap-2 md:mb-10 md:gap-4">
+          <CityIcon className="h-12 w-12 text-bloodOrange md:h-20 md:w-20" />
+
+          <h2 className="text-center font-display text-4xl text-stone-800 md:text-5xl">
             Traverse City
           </h2>
-          <p className="text-lg md:text-xl text-stone-600 max-w-md mx-auto text-center">
+
+          <p className="mx-auto max-w-md text-center text-sm leading-relaxed text-stone-600 md:text-xl">
             A bit further out, but a good option if Anchor Inn and the peninsula
-            towns are full — roughly 30-40 minutes from Foxglove Farm.
+            towns are full — roughly 30–40 minutes from The Foxglove Farm.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+
+        <div className="grid gap-4 md:grid-cols-3 md:gap-6">
           {traverseCity.map((spot) => (
             <StayCard key={spot.name} spot={spot} />
           ))}
@@ -187,30 +208,35 @@ export default function Lodging() {
 
       <SectionDivider />
 
-      {/* Logistics: Transportation, Airport, Groceries */}
+      {/* Logistics */}
       <section
         id="logistics"
-        className="max-w-5xl mx-auto px-6 md:px-16 pb-24 scroll-mt-20"
+        className="mx-auto max-w-5xl scroll-mt-20 px-6 pb-14 md:px-16 md:pb-24"
       >
-        <h2 className="font-display text-5xl mb-12 text-center text-stone-800">
+        <h2 className="mb-8 text-center font-display text-4xl text-stone-800 md:mb-12 md:text-5xl">
           Getting Here &amp; Settling In
         </h2>
 
-        <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start mb-14">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <PlaneIcon className="w-24 h-24 text-terracotta" />
-            <h3 className="font-display text-3xl md:text-4xl text-stone-800">
+        {/* Airport */}
+        <div className="mb-10 grid gap-5 md:mb-14 md:grid-cols-[1fr_2fr] md:gap-10">
+          <div className="flex flex-col items-center gap-2 md:items-start md:gap-4">
+            <PlaneIcon className="h-14 w-14 text-bloodOrange md:h-24 md:w-24" />
+
+            <h3 className="font-display text-3xl text-stone-800 md:text-4xl">
               Airport
             </h3>
           </div>
+
           <div>
-            <p className="font-sans font-semibold text-xl md:text-2xl text-stone-800">
+            <p className="font-sans text-base font-semibold text-stone-800 md:text-2xl">
               Cherry Capital Airport (TVC)
             </p>
-            <p className="text-lg md:text-xl text-stone-600 leading-relaxed">
-              The closest major airport to Foxglove Farm and the easiest way to
-              fly in for the weekend.
+
+            <p className="text-sm leading-relaxed text-stone-600 md:text-xl">
+              The closest major airport to The Foxglove Farm and the easiest way
+              to fly in for the weekend.
             </p>
+
             <SpotLinks
               spot={{
                 name: "Cherry Capital Airport",
@@ -220,15 +246,18 @@ export default function Lodging() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start mb-14">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <CarIcon className="w-24 h-24 text-terracotta" />
-            <h3 className="font-display text-3xl md:text-4xl text-stone-800">
+        {/* Getting Around */}
+        <div className="mb-10 grid gap-5 md:mb-14 md:grid-cols-[1fr_2fr] md:gap-10">
+          <div className="flex flex-col items-center gap-2 md:items-start md:gap-4">
+            <CarIcon className="h-14 w-14 text-bloodOrange md:h-24 md:w-24" />
+
+            <h3 className="font-display text-3xl text-stone-800 md:text-4xl">
               Getting Around
             </h3>
           </div>
+
           <div>
-            <p className="text-lg md:text-xl text-stone-600 leading-relaxed mb-3">
+            <p className="mb-3 text-sm leading-relaxed text-stone-600 md:text-xl">
               <span className="font-sans font-semibold text-stone-800">
                 Heads up:
               </span>{" "}
@@ -236,7 +265,8 @@ export default function Lodging() {
               recommend planning around a rental car or a scheduled ride
               instead.
             </p>
-            <p className="text-lg md:text-xl text-stone-600 leading-relaxed">
+
+            <p className="text-sm leading-relaxed text-stone-600 md:text-xl">
               Car rental counters are located directly at the airport. For
               scheduled rides,{" "}
               <span className="font-sans font-semibold text-stone-800">
@@ -244,6 +274,7 @@ export default function Lodging() {
               </span>{" "}
               offers pre-booked pickups — worth reserving ahead of time.
             </p>
+
             <SpotLinks
               spot={{
                 name: "Up North Taxi",
@@ -253,24 +284,29 @@ export default function Lodging() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <CartIcon className="w-24 h-24 text-terracotta" />
-            <h3 className="font-display text-3xl md:text-4xl text-stone-800">
+        {/* Groceries */}
+        <div className="grid gap-5 md:grid-cols-[1fr_2fr] md:gap-10">
+          <div className="flex flex-col items-center gap-2 md:items-start md:gap-4">
+            <CartIcon className="h-14 w-14 text-bloodOrange md:h-24 md:w-24" />
+
+            <h3 className="font-display text-3xl text-stone-800 md:text-4xl">
               Groceries
             </h3>
           </div>
-          <div className="space-y-6">
+
+          <div className="space-y-4 md:space-y-6">
             {groceries.map((spot) => (
               <div key={spot.name}>
-                <p className="font-sans font-semibold text-xl md:text-2xl text-stone-800">
+                <p className="font-sans text-base font-semibold text-stone-800 md:text-2xl">
                   {spot.name}
                 </p>
+
                 {spot.description && (
-                  <p className="text-lg md:text-xl text-stone-600 leading-relaxed">
+                  <p className="text-sm leading-relaxed text-stone-600 md:text-xl">
                     {spot.description}
                   </p>
                 )}
+
                 <SpotLinks spot={spot} />
               </div>
             ))}
