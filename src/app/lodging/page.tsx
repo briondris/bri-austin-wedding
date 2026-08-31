@@ -12,6 +12,7 @@ import {
 import SpotLinks from "@/components/lodging/SpotLinks";
 import StayCard from "@/components/lodging/StayCard";
 import SectionDivider from "@/components/lodging/SectionDivider";
+import { RetroStripeDividerTop } from "@/components/RetroStripeDivider";
 
 import {
   jumpLinks,
@@ -24,6 +25,7 @@ import {
 export default function Lodging() {
   return (
     <main className="min-h-screen bg-cream">
+      <RetroStripeDividerTop />
       {/* Header */}
       <div className="mx-auto max-w-2xl px-6 pt-10 pb-6 text-center md:pt-24 md:pb-10">
         <p className="mb-2 font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-bloodOrange md:mb-4 md:text-lg md:tracking-[0.3em]">

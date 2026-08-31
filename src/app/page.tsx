@@ -113,8 +113,8 @@ export default function Home() {
       </section>
 
       {/* Editorial 1: How We Met */}
-      <section className="px-6 px-6 md:px-16 py-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="px-6 py-10 md:px-16 md:py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-7 md:gap-12 items-center">
           <div className="relative">
             <span className="absolute -left-4 top-0 bottom-0 flex items-center [writing-mode:vertical-lr] rotate-180 text-xs tracking-[0.3em] uppercase text-white/90">
               01 / How We Met
@@ -133,18 +133,17 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="font-display text-4xl md:text-6xl leading-tight mb-6 text-white/90">
+            <h2 className="font-display text-4xl md:text-6xl leading-tight mb-3 md:mb-6 text-white/90">
               The Story <span className="italic text-bloodOrange">So</span>{" "}
               <span className="italic text-bloodOrange">Far</span>
             </h2>
-            <p className="text-base md:text-2xl text-ivory/90 leading-relaxed">
+            <p className="text-base md:text-2xl text-ivory/90 leading-relaxed mb-3 md:mb-5">
               We were coworkers first in 2021, before we found out we&apos;d
               actually crossed paths years earlier at the same SIGGRAPH
               conference in Japan back in 2018. It was February of 2022 when
               things became official.
             </p>
-            <br></br>
-            <p className="text-base md:text-2xl text-ivory/90 leading-relaxed mb-8">
+            <p className="text-base md:text-2xl text-ivory/90 leading-relaxed mb-5 md:mb-8">
               Turns out we both already loved Titanic before we&apos;d even met.
               From there, together we shared movies, like Lady Bird, hiked
               Shenandoah, and went to our first concert as a couple (Washed
@@ -196,21 +195,21 @@ export default function Home() {
       </section>
 
       {/* Editorial 2: Two Become One Big Party */}
-      <section className="bg-cream px-6 md:px-16 py-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <section className="bg-cream px-6 py-10 md:px-16 md:py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-7 md:gap-12 items-start">
           <div className="order-2 md:order-1">
-            <h2 className="font-display text-6xl md:text-6xl leading-tight mb-6 text-stone-800">
+            <h2 className="font-display text-5xl md:text-6xl leading-tight mb-3 md:mb-6 text-stone-800">
               Two Become
               <br />
               <span className="italic text-olive">One Big Party</span>
             </h2>
-            <p className="text-lg md:text-2xl text-stone-600 leading-relaxed mb-6">
+            <p className="text-lg md:text-2xl text-stone-600 leading-relaxed mb-3 md:mb-6">
               Austin grew up coming to Michigan, and once we got to know the
               landscape together, the beauty of it was impossible to miss. Since
               2023, this stretch of the Leelanau Peninsula has become one of our
               favorite places.
             </p>
-            <p className="text-lg md:text-2xl text-stone-600 leading-relaxed mb-8">
+            <p className="text-lg md:text-2xl text-stone-600 leading-relaxed mb-5 md:mb-8">
               It also happens to sit right in the middle of everyone we love,
               scattered as you all are from the West Coast to the East Coast to
               Texas. Somehow, that made it the easiest choice in the world.
@@ -274,8 +273,8 @@ export default function Home() {
       </section>
 
       {/* Editorial 3: The Proposal */}
-      <section className="px-6 md:px-16 py-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="px-6 py-10 md:px-16 md:py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-7 md:gap-12 items-center">
           <div className="relative">
             <span className="absolute -left-4 top-0 bottom-0 flex items-center [writing-mode:vertical-lr] rotate-180 text-xs tracking-[0.3em] uppercase text-white/90">
               03 / The Proposal
@@ -294,12 +293,12 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="font-display text-5xl md:text-6xl leading-tight mb-6 text-white/90">
+            <h2 className="font-display text-5xl md:text-6xl leading-tight mb-3 md:mb-6 text-white/90">
               How We Got Here,
               <br /> With
               <span className="italic text-marigold"> Some Help</span>
             </h2>
-            <p className="text-base md:text-2xl text-white/90 leading-relaxed">
+            <p className="text-base md:text-2xl text-white/90 leading-relaxed mb-3 md:mb-5">
               We had it all planned out, well, one of us did. Golden Gate Park
               is basically our backyard, so a walk there didn&apos;t raise any
               alarms, even though Bri knew something was going on. What she
@@ -307,7 +306,7 @@ export default function Home() {
               there, hidden nearby, with Hunter (her cousin-in-law) waiting to
               catch the moment on camera the second we showed up.
             </p>
-            <p className="text-base md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base md:text-2xl text-white/90 leading-relaxed mb-5 md:mb-8">
               It was quiet, it was ours, and nobody even walked past. We went
               from that little patch of woods to planning a wedding in the woods
               of Michigan, turns out, we really love trees.
