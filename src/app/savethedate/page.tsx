@@ -1,12 +1,13 @@
 import Countdown from "@/components/Countdown";
 import SaveTheDateForm from "@/components/SaveTheDateForm";
-import { RetroStripeDividerTop } from "@/components/RetroStripeDivider";
+import {
+  SAVE_THE_DATE_DEADLINE_LABEL,
+  SAVE_THE_DATE_DEADLINE,
+} from "@/data/saveTheDate";
 
 export default function SaveTheDate() {
   return (
     <main className="min-h-screen bg-cream flex flex-col">
-      <RetroStripeDividerTop />
-
       <div className="px-6 pb-10 md:pb-16">
         {/* Intro */}
         <div className="max-w-3xl mx-auto text-center pt-8 md:pt-20 pb-3 md:pb-6">
@@ -28,14 +29,16 @@ export default function SaveTheDate() {
 
           <p className="max-w-xl mx-auto font-sans text-xs md:text-lg text-stone-600 leading-relaxed">
             Add your address below by{" "}
-            <span className="font-semibold text-bloodOrange">September 30</span>{" "}
+            <span className="font-semibold text-bloodOrange">
+              {SAVE_THE_DATE_DEADLINE_LABEL}
+            </span>{" "}
             so we can mail you the invite!
           </p>
         </div>
 
         {/* Countdown */}
         <div className="max-w-4xl mx-auto mb-5 md:mb-10">
-          <Countdown />
+          <Countdown targetDate={SAVE_THE_DATE_DEADLINE} />
         </div>
 
         {/* Form intro */}

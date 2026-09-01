@@ -2,14 +2,21 @@
 
 import { useEffect, useState } from "react";
 
-const TARGET_DATE = new Date("2026-10-31T00:00:00");
+type CountdownProps = {
+  targetDate: Date;
+};
 
-function getTimeLeft() {
+function getTimeLeft(targetDate: Date) {
   const now = new Date();
-  const diff = TARGET_DATE.getTime() - now.getTime();
+  const diff = targetDate.getTime() - now.getTime();
 
   if (diff <= 0) {
-    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    return {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
   }
 
   return {
@@ -20,16 +27,20 @@ function getTimeLeft() {
   };
 }
 
-export default function Countdown() {
+export default function Countdown({ targetDate }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState<ReturnType<
     typeof getTimeLeft
   > | null>(null);
 
   useEffect(() => {
-    setTimeLeft(getTimeLeft());
-    const interval = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
+    setTimeLeft(getTimeLeft(targetDate));
+
+    const interval = setInterval(() => {
+      setTimeLeft(getTimeLeft(targetDate));
+    }, 1000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [targetDate]);
 
   if (!timeLeft) return null;
 
@@ -47,6 +58,7 @@ export default function Countdown() {
           <span className="font-sans font-bold text-lg md:text-5xl text-apricot tabular-nums">
             {unit.value}
           </span>
+
           <span className="font-sans font-semibold text-[9px] md:text-sm uppercase tracking-widest text-stone-600 mt-0.5">
             {unit.label}
           </span>

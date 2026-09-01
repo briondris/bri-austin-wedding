@@ -29,3 +29,78 @@ body {
   background: var(--color-apricot);
   color: var(--color-cream);
 }
+/* --------------------------------
+   Retro stripe animation
+--------------------------------- */
+
+/* 1. Happens ONCE when the page loads */
+@keyframes stripeEnter {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.retro-stripe-enter {
+  transform: scaleX(0);
+
+  /* Makes it grow from right → left */
+  transform-origin: right center;
+
+  animation: stripeEnter 900ms ease-in-out forwards;
+}
+
+.retro-stripe-enter-1 .retro-stripe-pulse {
+  animation-delay: 1.5s;
+}
+
+.retro-stripe-enter-2 .retro-stripe-pulse {
+  animation-delay: 1.62s;
+}
+
+.retro-stripe-enter-3 .retro-stripe-pulse {
+  animation-delay: 1.74s;
+}
+
+/* 2. Repeating little center shrink */
+@keyframes stripePulse {
+  0%,
+  90%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  95% {
+    transform: scaleX(0.35);
+  }
+}
+
+.retro-stripe-pulse {
+  width: 100%;
+  transform-origin: center;
+  animation: stripePulse 15s ease-in-out infinite;
+}
+
+.retro-stripe-enter-1 .retro-stripe-pulse {
+  animation-delay: 1.5s;
+}
+
+.retro-stripe-enter-2 .retro-stripe-pulse {
+  animation-delay: 1.62s;
+}
+
+.retro-stripe-enter-3 .retro-stripe-pulse {
+  animation-delay: 1.74s;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .retro-stripe-enter,
+  .retro-stripe-pulse {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
