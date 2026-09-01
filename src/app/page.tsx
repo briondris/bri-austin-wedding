@@ -11,8 +11,6 @@ export default function Home() {
     <main>
       {/* Hero */}
       <section className="flex h-[75vh] min-h-[450px] w-full flex-col">
-        {/* Top 70s stripe stack */}
-        <RetroStripeDividerTop />
         <div className="relative min-h-0 flex-1 w-full">
           <FadeImage
             src="/images/engagement/yes.jpg"

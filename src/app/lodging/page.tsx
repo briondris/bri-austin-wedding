@@ -12,7 +12,6 @@ import {
 import SpotLinks from "@/components/lodging/SpotLinks";
 import StayCard from "@/components/lodging/StayCard";
 import SectionDivider from "@/components/lodging/SectionDivider";
-import { RetroStripeDividerTop } from "@/components/RetroStripeDivider";
 
 import {
   jumpLinks,
@@ -25,7 +24,6 @@ import {
 export default function Lodging() {
   return (
     <main className="min-h-screen bg-cream">
-      <RetroStripeDividerTop />
       {/* Header */}
       <div className="mx-auto max-w-2xl px-6 pt-10 pb-6 text-center md:pt-24 md:pb-10">
         <p className="mb-2 font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-bloodOrange md:mb-4 md:text-lg md:tracking-[0.3em]">
@@ -86,10 +84,8 @@ export default function Lodging() {
               <span className="font-sans font-semibold text-stone-800">
                 A heads up:
               </span>{" "}
-              our welcome party, after party, and farewell brunch are all being
-              planned to launch from this area, and we&apos;re looking into a
-              shuttle bus running to and from this location. Staying nearby will
-              make the whole weekend easier to get around.
+              our wedding day after-party will be here, and we&apos;ve booked a
+              shuttle to take guests to and from this location.
             </p>
 
             <SpotLinks

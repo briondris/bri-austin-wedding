@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import DesktopNav from "./menu/DesktopNav";
 import MobileMenu from "./menu/MobileMenu";
+import { RetroStripeDividerTopAnimated } from "@/components/RetroStripeDivider";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -41,6 +42,7 @@ export default function Nav() {
       </div>
 
       <MobileMenu open={open} onClose={() => setOpen(false)} />
+      <RetroStripeDividerTopAnimated />
     </header>
   );
 }
